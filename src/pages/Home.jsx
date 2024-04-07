@@ -5,7 +5,10 @@ import HighlightText from '../components/core/HomePage/HighlightText';
 import CTAButton from '../components/core/HomePage/Button';
 import Banner from '../assets/Images/banner.mp4'
 import CodeBlocks from '../components/core/HomePage/CodeBlocks';
-
+import TimelineSection from '../components/core/HomePage/TimelineSection';
+import LearningLanguageSection from '../components/core/HomePage/LearningLanguageSection';
+import InstructorSection from '../components/core/HomePage/InstructorSection';
+import Footer from '../components/common/Footer'
 const Home = () => {
   return (
     <div>
@@ -33,8 +36,8 @@ const Home = () => {
             <CTAButton active={false} linkto={"/login"}>Book A Demo</CTAButton>
          </div>
          
-         <div className='mx-3 my-12 shadow-blue-200'>
-          <video muted loop autoPlay>
+         <div className='mx-3 my-12'>
+          <video muted loop autoPlay >
             <source src={Banner} type='video/mp4'/>
           </video>
          </div>
@@ -62,8 +65,7 @@ const Home = () => {
             }
           }
           codeblock={`<!DOCTYPE html> \n <html>\n <head><title>Example</title> <linkrel="stylesheet"href="styles.css">
-          </head>\n<body>\n<h1><a href="/">Header</a>\n <h1><a href="/">Header</a></h1> \n <nav><a href="one/">One</a><ahref="two/">Two</a><ahref="three/">Three</a> \n </nav>
-          `}
+          </head>\n<body>\n<h1><a href="/">Header</a>\n <h1><a href="/">Header</a></h1> \n <nav><a href="one/">One</a><a href="two/">Two</a><a href="three/">Three</a> \n </nav>`}
           codeColor={"text-yellow-25"}
           />
          </div>
@@ -92,16 +94,52 @@ const Home = () => {
             }
         }
           codeblock={`<!DOCTYPE html> \n <html>\n <head><title>Example</title> <linkrel="stylesheet"href="styles.css">
-          </head>\n<body>\n<h1><a href="/">Header</a>\n <h1><a href="/">Header</a></h1> \n <nav><a href="one/">One</a><ahref="two/">Two</a><ahref="three/">Three</a> \n </nav>
-          `}
+          </head>\n<body>\n<h1><a href="/">Header</a>\n <h1><a href="/">Header</a></h1> \n <nav><a href="one/">One</a><a href="two/">Two</a><a href="three/">Three</a> \n </nav>`}
           codeColor={"text-white"}
           />
          </div>
 
       </div>
       {/* Section 2 */}
+      <div className='bg-pure-greys-5 text-richblack-700'>
+        <div className='homepage-bg h-[325px]'>
+          <div className='w-11/12 max-w-maxContent flex flex-col items-center justify-between gap-5 mx-auto'>
+            <div className='h-[150px]'></div>
+            <div className='flex flex-row gap-7 text-white'>
+              <CTAButton active={true} linkto={"/signup"}>
+                <div className='flex items-center gap-3'>
+                  Explore Full Catalog
+                  <FaArrowRight/>
+                </div>
+              </CTAButton>
+              <CTAButton active={false} linkto={"/signup"}>
+                <div>
+                  Learn More
+                </div>
+              </CTAButton>
+            </div>
+          </div>
+        </div>
+        <div className='mx-auto w-11/12 max-w-maxContent flex flex-col items-center justify-between gap-7'>
+          <div className='flex flex-row gap-10 mb-10 mt-[95px] px-14'>
+            <div className='text-4xl font-semibold w-[45%]'>
+            Get the skills you need for a <HighlightText text={"job that is in demand"}/> 
+            </div>
+            <div className='flex flex-col gap-10 w-[50%] items-start'>
+            <div className='text-[16px]'>The modern StudyNotion is the dictates its own terms. Today, to be a competitive specialist requires more than professional skills.</div>
+          <CTAButton active={true}>Learn More</CTAButton>
+          </div>
+          </div>  
+          <TimelineSection/>
+          <LearningLanguageSection/>
+        </div>
+      </div>
       {/* Section 3 */}
-      {/* Footer  */}
+      <div className='w-11/12 mx-auto max-w-maxContent flex flex-col items-center justify-between gap-8 first-letter bg-richblack-900 text-white'>
+        <InstructorSection/>
+        <h2 className='text-center text-4xl font-semibold mt-10 '>Review from other learner</h2>
+      </div>
+      <Footer/>
     </div>
   )
 }

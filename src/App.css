@@ -4,3 +4,18 @@
 html ,body{
     overflow-x:hidden;
 }
+
+.homepage-bg{
+    background: url("../src/assets/Images/bghome.svg");
+}
+
+.cursor-placeholder {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.shadow-upper{
+    box-shadow: 10px -10px 16px -10px rgba(5, 135, 242, 0.92), 0 -12px 14px -10px rgba(40, 91, 186, 0.929);
+}
