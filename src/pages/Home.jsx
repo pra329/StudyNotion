@@ -44,7 +44,7 @@ const Home = () => {
 
          {/* Code Section 1 */}
          <div>
-          <CodeBlocks position={"lg:flex-row"} heading={<div className='text-4xl font-semibold'>
+          <CodeBlocks position={"lg:flex-row sm:flex-col max-sm:flex-col"} heading={<div className='text-4xl font-semibold'>
             Unlock Your <HighlightText text={"Coding Potential"}/> With Our Online Courses
           </div>}
           subHeading={
@@ -64,15 +64,14 @@ const Home = () => {
               active:false
             }
           }
-          codeblock={`<!DOCTYPE html> \n <html>\n <head><title>Example</title> <linkrel="stylesheet"href="styles.css">
-          </head>\n<body>\n<h1><a href="/">Header</a>\n <h1><a href="/">Header</a></h1> \n <nav><a href="one/">One</a><a href="two/">Two</a><a href="three/">Three</a> \n </nav>`}
+          codeblock={`<!DOCTYPE html> \n <html>\n <head><title>Example</title> </head>\n<body>\n<h1><a href="/">Header</a>\n <h1><a href="/">Header</a></h1> \n <nav><a href="one/">One</a><a href="two/">Two</a><a href="three/">Three</a> \n </nav>`}
           codeColor={"text-yellow-25"}
           />
          </div>
 
           {/* Code Section 2 */}
           <div>
-          <CodeBlocks position={"lg:flex-row-reverse"} 
+          <CodeBlocks position={"lg:flex-row-reverse sm:flex-col max-sm:flex-col"} 
           heading={<div className='w-[100%] text-4xl font-semibold lg:w-[50%]'>
           Start <HighlightText text={"coding in seconds"}/>
           </div>}
@@ -93,8 +92,7 @@ const Home = () => {
                 active: false,
             }
         }
-          codeblock={`<!DOCTYPE html> \n <html>\n <head><title>Example</title> <linkrel="stylesheet"href="styles.css">
-          </head>\n<body>\n<h1><a href="/">Header</a>\n <h1><a href="/">Header</a></h1> \n <nav><a href="one/">One</a><a href="two/">Two</a><a href="three/">Three</a> \n </nav>`}
+          codeblock={`<!DOCTYPE html> \n <html>\n <head><title>Example</title></head>\n<body>\n<h1><a href="/">Header</a>\n <h1><a href="/">Header</a></h1> \n <nav><a href="one/">One</a><a href="two/">Two</a><a href="three/">Three</a> \n </nav>`}
           codeColor={"text-white"}
           />
          </div>
@@ -121,11 +119,11 @@ const Home = () => {
           </div>
         </div>
         <div className='mx-auto w-11/12 max-w-maxContent flex flex-col items-center justify-between gap-7'>
-          <div className='flex flex-row gap-10 mb-10 mt-[95px] px-14'>
-            <div className='text-4xl font-semibold w-[45%]'>
+          <div className='flex lg:flex-row sm:flex-col max-sm:flex-col gap-10 mb-10 mt-[95px] lg:px-10 sm:px-[300px] max-sm:px-[300px]'>
+            <div className='text-4xl font-semibold lg:w-[600px] sm:w-[400px] max-sm:w-[380px] max-sm:px-[10px]'>
             Get the skills you need for a <HighlightText text={"job that is in demand"}/> 
             </div>
-            <div className='flex flex-col gap-10 w-[50%] items-start'>
+            <div className='flex flex-col gap-10 lg:w-[50%] sm:w-[100%] items-start max-sm:px-2'>
             <div className='text-[16px]'>The modern StudyNotion is the dictates its own terms. Today, to be a competitive specialist requires more than professional skills.</div>
           <CTAButton active={true}>Learn More</CTAButton>
           </div>

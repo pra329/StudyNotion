@@ -6,12 +6,12 @@ import CTAButton from '../HomePage/Button'
 const InstructorSection = () => {
   return (
     <div className='mt-16'>
-      <div className='flex flex-row gap-20 items-center'>
-        <div className='w-[50%]'>
-            <img src={Instructor} alt="Instructor Image" className='shadow-white object-contain w-[500px]'/>
+      <div className='flex lg:flex-row sm:flex-col-reverse max-sm:flex-col-reverse gap-20 items-center'>
+        <div className='lg:w-[700px] sm:w-[400px]'>
+            <img src={Instructor} alt="Instructor Image" className='shadow-white object-contain lg:w-[500px] sm:w-[700px]'/>
         </div>
-        <div className='w-[50%] flex flex-col gap-10'>
-            <div className='text-4xl font-semibold w-[50%]'>
+        <div className='lg:w-[700px] sm:w-[400px] flex flex-col gap-10'>
+            <div className='text-4xl font-semibold lg:w-[700px] sm:w-[400px]'>
                 Become an <HighlightText text={"instructor"}/>
             </div>
             <p className='font-medium text-[16px] w-[80%] text-richblack-300'>

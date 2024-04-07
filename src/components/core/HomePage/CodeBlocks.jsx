@@ -6,7 +6,7 @@ import { TypeAnimation } from 'react-type-animation';
 
 const CodeBlocks = ({position,heading,subHeading,ctabtn1,ctabtn2,codeblock,backgroundGradient,codeColor}) => {
     return (
-    <div className={`flex ${position} my-20 relative justify-between gap-14 lg:gap-10`}>
+    <div className={`flex ${position} my-10 relative justify-between gap-14 lg:gap-10`}>
         {/* Section 1 */}
         <div className='w-[100%] lg:w-[40%] flex flex-col gap-8'>
             {heading}
@@ -29,7 +29,7 @@ const CodeBlocks = ({position,heading,subHeading,ctabtn1,ctabtn2,codeblock,backg
             </div>
         </div>
         {/* Section 2 */}
-        <div className='h-fit flex flex-row text-10[px] w-[100%] py-4 lg:w-[500px] border-x-2 border border-y-2  border-x-richblack-600 border-y-richblack-800'>
+        <div className='lg:h-fit flex flex-row text-10[px] w-[100%] py-4 lg:w-[500px] border-x-2 border border-y-2  border-x-richblack-600 border-y-richblack-800'>
             <div className='text-center flex flex-col w-[10%] text-richblack-400 font-inter font-bold'>
                 <p>1</p>
                 <p>2</p>
@@ -41,9 +41,8 @@ const CodeBlocks = ({position,heading,subHeading,ctabtn1,ctabtn2,codeblock,backg
                 <p>8</p>
                 <p>9</p>
                 <p>10</p>
-                <p>11</p>
             </div>
-            <div className={`w-[90%] flex flex-col gap-2 font-bold font-mono ${codeColor} pr-2`}>
+            <div className={`w-[100%] flex flex-col gap-2 font-bold font-mono ${codeColor} pr-2`}>
            <TypeAnimation
             sequence={[codeblock, 2000, ""]}
             repeat={Infinity}
