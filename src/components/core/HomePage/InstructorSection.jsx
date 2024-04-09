@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/img-redundant-alt */
 import React from 'react'
 import Instructor from '../../../assets/Images/Instructor.png'
 import HighlightText from './HighlightText'
@@ -7,10 +8,10 @@ const InstructorSection = () => {
   return (
     <div className='mt-16'>
       <div className='flex lg:flex-row sm:flex-col-reverse max-sm:flex-col-reverse gap-20 items-center'>
-        <div className='lg:w-[700px] sm:w-[400px]'>
+        <div className='lg:w-[500px] sm:w-[400px] '>
             <img src={Instructor} alt="Instructor Image" className='shadow-white object-contain lg:w-[500px] sm:w-[700px]'/>
         </div>
-        <div className='lg:w-[700px] sm:w-[400px] flex flex-col gap-10'>
+        <div className='lg:w-[500px] sm:w-[500px] max-sm:w-[300px] flex flex-col gap-10'>
             <div className='text-4xl font-semibold lg:w-[700px] sm:w-[400px]'>
                 Become an <HighlightText text={"instructor"}/>
             </div>
