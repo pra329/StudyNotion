@@ -38,10 +38,10 @@ const VerifyEmail = () => {
                 <p className="text-[1.125rem] leading-[1.625rem] my-4 text-richblack-100">A verification code has been sent to you. Enter the code below</p>
                 <form onSubmit={handleOnSubmit}>
                 <OTPInput
-              value={otp}
-              onChange={setOtp}
-              numInputs={6}
-              renderInput={(props) => (
+                value={otp}
+                onChange={setOtp}
+                numInputs={6}
+                renderInput={(props) => (
                 <input
                   {...props}
                   placeholder="-"
@@ -62,8 +62,8 @@ const VerifyEmail = () => {
                 </form>
                 <div className="mt-6 flex items-center justify-between">
                     <Link to="/login">
-                    <div>
-                    <IoIosArrowRoundBack className='text-white'/> <p className="flex items-center gap-x-2 text-richblack-5">Back To Login</p>
+                    <div className='flex items-center gap-2'>
+                    <IoIosArrowRoundBack className='text-white' fontSize={24}/> <p className="flex items-center gap-x-2 text-richblack-5">Back To Login</p>
                     </div>
                     </Link>
                     <button className="flex items-center text-blue-100 gap-x-2" onClick={() => dispatch(sendOtp(signupData.email,navigate))}>
