@@ -57,6 +57,7 @@ export function signUp(
     const toastId = toast.loading("Loading...")
     dispatch(setLoading(true))
     try {
+      console.log("I Am In Try Block Signup")
       const response = await apiConnector("POST", SIGNUP_API, {
         accountType,
         firstName,
@@ -66,14 +67,13 @@ export function signUp(
         confirmPassword,
         otp,
       })
-
       console.log("SIGNUP API RESPONSE............", response)
 
       if (!response.data.success) {
         throw new Error(response.data.message)
       }
       toast.success("Signup Successful")
-      // navigate("/login")
+      navigate("/login")
     } catch (error) {
       console.log("SIGNUP API ERROR............", error)
       toast.error("Signup Failed")

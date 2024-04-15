@@ -49,7 +49,7 @@ exports.resetPassword = async(req,res) => {
         // data fetch
         const {password , confirmPassword , token} = req.body;
         // validation
-        if(password != confirmPassword){
+        if(password !== confirmPassword){
             return res.json({
                 success:false,
                 message:'Password Not Matching'
