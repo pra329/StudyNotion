@@ -5,6 +5,8 @@ import Navbar from "./components/common/Navbar";
 import OpenRoute from "./components/core/auth/OpenRoute"
 import Login from "./pages/Login"
 import Signup from "./pages/Signup"
+import ForgotPassword from "./pages/ForgotPassword";
+import UpdatePassword from "./pages/UpdatePassword";
 
 function App() {
   return (
@@ -25,6 +27,24 @@ function App() {
           element={
             <OpenRoute>
               <Login />
+            </OpenRoute>
+          }
+        />
+
+    <Route
+          path="forgot-password"
+          element={
+            <OpenRoute>
+             <ForgotPassword/>
+            </OpenRoute>
+          }
+        />
+
+    <Route
+          path="update-password/:id"
+          element={
+            <OpenRoute>
+             <UpdatePassword/>
             </OpenRoute>
           }
         />

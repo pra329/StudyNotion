@@ -73,7 +73,7 @@ export function signUp(
         throw new Error(response.data.message)
       }
       toast.success("Signup Successful")
-      navigate("/login")
+      // navigate("/login")
     } catch (error) {
       console.log("SIGNUP API ERROR............", error)
       toast.error("Signup Failed")
@@ -100,7 +100,7 @@ export function login(email, password, navigate) {
         throw new Error(response.data.message)
       }
 
-      toast.success("Login Successful")
+      toast.success("Login Successfull")
       dispatch(setToken(response.data.token))
       const userImage = response.data?.user?.image
         ? response.data.user.image
@@ -137,13 +137,14 @@ export function getPasswordResetToken(email, setEmailSent) {
     } catch (error) {
       console.log("RESETPASSTOKEN ERROR............", error)
       toast.error("Failed To Send Reset Email")
+    } finally{
+      dispatch(setLoading(false))
+      toast.dismiss(toastId)
     }
-    toast.dismiss(toastId)
-    dispatch(setLoading(false))
   }
 }
 
-export function resetPassword(password, confirmPassword, token, navigate) {
+export function resetPassword(password, confirmPassword, token , navigate) {
   return async (dispatch) => {
     const toastId = toast.loading("Loading...")
     dispatch(setLoading(true))
@@ -161,13 +162,15 @@ export function resetPassword(password, confirmPassword, token, navigate) {
       }
 
       toast.success("Password Reset Successfully")
-      navigate("/login")
+      navigate('/login')
     } catch (error) {
       console.log("RESETPASSWORD ERROR............", error)
       toast.error("Failed To Reset Password")
     }
-    toast.dismiss(toastId)
-    dispatch(setLoading(false))
+    finally{
+      toast.dismiss(toastId)
+      dispatch(setLoading(false))
+    }
   }
 }
 

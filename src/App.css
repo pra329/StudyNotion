@@ -19,3 +19,22 @@ html ,body{
 .shadow-upper{
     box-shadow: 10px -10px 16px -10px rgba(5, 135, 242, 0.92), 0 -12px 14px -10px rgba(40, 91, 186, 0.929);
 }
+
+.spinner {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: 9px solid;
+    border-color: #dbdcef;
+    border-right-color: #474bff;
+    animation: spinner-d3wgkg 1s infinite linear;
+}
+
+@keyframes spinner-d3wgkg {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
