@@ -50,11 +50,11 @@ const Navbar = () => {
     <div className='flex h-14 items-center justify-center border-b-[1px] border-b-richblack-700'>
         <div className='flex w-11/12 max-w-maxContent items-center justify-between'>
             <Link to="/">
-                <img src={logo} alt='Logo' width={160} height={32} loading='lazy'/>
+                <img src={logo} alt='Logo' width={160} height={32} loading='lazy' />
             </Link>
             {/* Nav Link */}
             <nav>
-                <ul className='flex gap-x-6 text-richblack-25'>
+                <ul className='flex gap-x-6 text-richblack-25 max-sm:invisible sm:invisible lg:visible'>
                     {
                         NavbarLinks.map((link,index) => {
                             return (<li key={index}>
